@@ -40,7 +40,7 @@
 {% endmacro %}
 
 {% macro default__current_timestamp_backcompat() %}
-    current_timestamp::timestamp
+    CAST(current_timestamp() AS TIMESTAMP)
 {% endmacro %}
 
 {% macro current_timestamp_in_utc_backcompat() %}
